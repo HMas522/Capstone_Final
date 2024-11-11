@@ -34,7 +34,7 @@ def get_API_key():
     return key
 
 # Your API key from RapidAPI
-API_KEY = "YOUR_RAPIDAPI_KEY"
+api_key = get_API_key()
 API_HOST = "api-football-v1.p.rapidapi.com"
 API_URL = "https://api-football-v1.p.rapidapi.com/v3/standings"
 
@@ -50,7 +50,7 @@ LEAGUE_IDS = {
 # Fetch standings from the API
 def get_standings(league_id):
     headers = {
-        "X-RapidAPI-Key": API_KEY,
+        "X-RapidAPI-Key": api_key,
         "X-RapidAPI-Host": API_HOST
     }
     params = {
